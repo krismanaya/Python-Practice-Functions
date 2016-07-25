@@ -102,5 +102,13 @@ def purify(list):
         if list[i] % 2 == 0: 
             l.append(list[i])
     return l
+
+#Takes a list and returns the product of each argument in the list. 
+def product(list):
+    total = 1
+    for num in list: 
+        total *= num
+        print total
+    return total
     
         
