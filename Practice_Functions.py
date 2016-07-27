@@ -110,5 +110,17 @@ def product(list):
         total *= num
         print total
     return total
-    
+
+#Removes duplicate integers in a list. 
+def remove_duplicates(list):
+    list.sort()
+    new_list = []
+    for i in list: 
+        if list.count(i) >= 2: 
+            list.remove(i)
+            new_list.append(i)
+            new_list
+        else: 
+            return list 
+    return new_list
         
