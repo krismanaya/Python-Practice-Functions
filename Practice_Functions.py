@@ -112,15 +112,26 @@ def product(list):
     return total
 
 #Removes duplicate integers in a list. 
-def remove_duplicates(list):
-    list.sort()
+def remove_duplicates(list): 
     new_list = []
     for i in list: 
-        if list.count(i) >= 2: 
-            list.remove(i)
+        if i not in new_list: 
             new_list.append(i)
-            new_list
-        else: 
-            return list 
     return new_list
+
+#Finds the median of an even and odd list
+def median(list):
+    list.sort()
+    for i in range(len(list)):
+        if (len(list) - 1) %2 == 0: 
+            if len(list[i:]) == len(list[:i+1]):
+                new_list = list[i:i+1]
+                return new_list.pop()
+        else: 
+            if len(list[i:]) == len(list[:i]):
+                print len(list[i:])
+                print len(list[:i])
+                new_list = list[i-1:i+1]
+                print new_list
+                return sum(new_list)/2.0
         
