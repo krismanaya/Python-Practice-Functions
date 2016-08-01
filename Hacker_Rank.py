@@ -20,10 +20,15 @@ def less_integer(n):
         k += 1
 
 ## returns true if the year is a leap year and false otherwise. ##
-def leap_year(x): 
-    if x % 4 == 0 and x % 100 == 0 and x % 400 == 0: 
+def leap_year(n):
+    if n % 400 == 0:
         return True
-    return False 
+    if n % 100 == 0:
+        return False
+    if n % 4 == 0:
+        return True
+    else:
+        return False
 
 ## returns power of integer with map and lambda properties. ##
 def pow_integer(n):
