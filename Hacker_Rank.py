@@ -36,9 +36,9 @@ def pow_integer(n):
 
 ## P norm ## 
 def p_norm(vector,p): 
-    return pow(sum([(pow(number,p) for number in vector]),p) 
+    return pow(sum([pow(number,p) for number in vector]), p)
 
 ## norm ## 
 def norm(vector): 
-    return pow(sum([(pow(number,2) for number in vector]),.5)
+    return pow(sum([pow(number,2) for number in vector]), .5)
     
