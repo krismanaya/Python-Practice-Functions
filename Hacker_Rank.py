@@ -6,7 +6,8 @@ def two_integers(x,y):
     yield x - y
     yield x*y
 
-## Prints division and float division for two integers. ## 
+## Prints division and float division for two integers. ##
+
 def divide_two_integers(x,y): 
     print x // y
     print x / float(y)
@@ -27,4 +28,12 @@ def leap_year(x):
 ## returns power of integer with map and lambda properties. ##
 def pow_integer(n):
     return map(lambda n: n*n ,range(0,n))
+
+## P norm ## 
+def p_norm(vector,p): 
+    return sum([pow(pow(number,p),p) for number in vector])
+
+## norm ## 
+def norm(vector): 
+    retrun sum([pow(pow(number,2),.5) for number in vector])
     
