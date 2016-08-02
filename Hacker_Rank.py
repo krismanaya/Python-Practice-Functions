@@ -34,11 +34,11 @@ def leap_year(n):
 def pow_integer(n):
     return map(lambda n: n*n ,range(0,n))
 
-## P norm ## 
+## L^P norm ## 
 def p_norm(vector,p): 
-    return pow(sum([pow(number,p) for number in vector]), p)
+    return pow(sum([pow(abs(number),p) for number in vector]), p)
 
-## norm ## 
+## L^2 norm ## 
 def norm(vector): 
-    return pow(sum([pow(number,2) for number in vector]), .5)
+    return pow(sum([pow(abs(number),2) for number in vector]), .5)
     
