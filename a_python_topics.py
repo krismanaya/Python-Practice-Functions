@@ -50,3 +50,17 @@ print 0b10100  #20 2^4 + 2^2
 print "******"
 print 0b1 + 0b11
 print 0b11 * 0b11
+
+
+#returns on if bit >= 4 and off if < 4
+def check_bit4(input): 
+    if input >= 0b1000: 
+        return "on"
+    if input < 0b1000: 
+        return "off"
+
+#flips the nth bit 
+def flip_bit(number,n): 
+    mask = (0b1 << n-1)
+    result = number ^ mask 
+    return bin(result)
