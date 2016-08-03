@@ -1,7 +1,8 @@
-class instuments(object): 
+class instruments(object): 
     def __init__(self,name,year):
-        self.name = name 
+        self.name = name
+        self.year = year 
 
-guitar = instuments('guitar')
-year = instuments('1973')
+guitar = instruments('guitar',None)
+year = instruments(None,'1973')
 print (guitar.name,year.year)
