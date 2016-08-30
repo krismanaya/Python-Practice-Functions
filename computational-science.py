@@ -33,11 +33,11 @@ class Vector:
 
     def __len__(self)
     """Return the dimenson of the vector"""
-    return len(self.d)
+        return len(self.d)
 
     def __getitem__(self,j): 
     """Return jth coordinate of vector."""
-    return self.d[j]
+        return self.d[j]
 
     def __setitem__(self,j,val): 
         """Set jth coordinage of vector to given value."""
@@ -45,12 +45,12 @@ class Vector:
 
     def __add__(self,other): 
     """Return sum of two vectors"""
-    if len(self) != len(other): 
-        raise ValueError('dimensions must agree')
-    result = Vector(len(self))
-    for j in range(len(self)): 
-        result[j] = self[j] + other[j]
-    return result 
+        if len(self) != len(other): 
+            raise ValueError('dimensions must agree')
+        result = Vector(len(self))
+        for j in range(len(self)): 
+            result[j] = self[j] + other[j]
+        return result 
 
     def __eg__(self,other): 
         """Return True if vector has same coordinages as other."""
